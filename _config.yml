@@ -1,0 +1,14 @@
+title: dolin\\it
+name: dolin\\it
+description: personal blog and homepage.
+url: "https://www.dolinit.com"
+theme: minima
+
+minima:
+  social_links:
+    - title: linkedin
+      icon: linkedin
+      url: "https://www.linkedin.com/in/blakedolin/"
+    - title: discord
+      icon: discord
+      url: "https://discord.com/users/231844849433706506"
