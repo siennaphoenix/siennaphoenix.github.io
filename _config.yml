@@ -1,8 +1,15 @@
+# Site-wide settings
+# ------------------
+
 title: dolin\\it
-name: dolin\\it
+
+author:
+  name: Blake Dolin
+  email: blake@dolinit.com
+
+# The `>` after `description:` means to ignore line-breaks until next key. If
+#   you wish to omit the line-break after the end of text, use `>-` instead.
 description: personal blog and homepage.
-url: "https://www.dolinit.com"
-theme: minima
 
 minima:
   social_links:
