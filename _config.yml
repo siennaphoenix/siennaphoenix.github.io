@@ -1,7 +1,7 @@
 # Site-wide settings
 # ------------------
 
-title: test
+title: dolinit.com
 
 author:
   name: Blake Dolin
@@ -9,13 +9,4 @@ author:
 
 # The `>` after `description:` means to ignore line-breaks until next key. If
 #   you wish to omit the line-break after the end of text, use `>-` instead.
-description: dolin\\IT.
-
-minima:
-  social_links:
-    - title: linkedin
-      icon: linkedin
-      url: "https://www.linkedin.com/in/blakedolin/"
-    - title: discord
-      icon: discord
-      url: "https://discord.com/users/231844849433706506"
+description: dolin\\IT
