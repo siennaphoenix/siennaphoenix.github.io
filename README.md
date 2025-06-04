@@ -1,2 +1,5 @@
-# pages
-Repo for GitHub Pages static site
+# dolin||tech
+
+personal blog and homepage.
+
+created by blake@dolinit.com
