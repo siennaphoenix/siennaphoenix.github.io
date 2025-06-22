@@ -18,4 +18,4 @@ _site/
 Gemfile.lock
 
 .markdownlint.json
-.temp
+node_modules/

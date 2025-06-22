@@ -1,0 +1,403 @@
+<!doctype html>
+    <html lang="en" style="">
+      <head>
+        <meta charset="utf-8" />
+        
+    <title>Blake Dolin</title>
+    <meta name="description" content="Lifelong IT nerd and tinkerer with a strong background in troubleshooting complex issues under pressure. Experienced across the stack, from hardware and software to servers and network, handling end-to-end problem solving. So lazy I write code to do all my work for me. Obsessed with security; they're never getting my blue party hat. I maintain an extensive home lab environment that I only occasionally consider setting on fire." />
+  
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" />
+        <style>
+          :root{color-scheme:light dark;--color-background-light: #ffffff;--color-dimmed-light: #f3f4f5;--color-primary-light: #191e23;--color-secondary-light: #6c7781;--color-accent-light: #0073aa;--color-background-dark: #191e23;--color-dimmed-dark: #23282d;--color-primary-dark: #fbfbfc;--color-secondary-dark: #ccd0d4;--color-accent-dark: #00a0d2;--color-background: var(--color-background-light);--color-dimmed: var(--color-dimmed-light);--color-primary: var(--color-primary-light);--color-secondary: var(--color-secondary-light);--color-accent: var(--color-accent-light);--scale-ratio: 1.25;--scale0: 1rem;--scale1: calc(var(--scale0) * var(--scale-ratio));--scale2: calc(var(--scale1) * var(--scale-ratio));--scale3: calc(var(--scale2) * var(--scale-ratio));--scale4: calc(var(--scale3) * var(--scale-ratio));--scale5: calc(var(--scale4) * var(--scale-ratio))}@media (prefers-color-scheme: dark){:root{--color-background: var(--color-background-dark);--color-dimmed: var(--color-dimmed-dark);--color-primary: var(--color-primary-dark);--color-secondary: var(--color-secondary-dark);--color-accent: var(--color-accent-dark)}}*{box-sizing:border-box;margin:0;padding:0}html{font-size:14px}body{background:var(--color-background);color:var(--color-primary);display:grid;font:1em/1.5 Lato,sans-serif;gap:2em;grid-template-columns:[full-start] 1fr [main-start side-start] minmax(min-content,12em) [side-end content-start] minmax(min-content,36em) [main-end content-end] 1fr [full-end];grid-template-rows:auto [content] 0;margin-bottom:4em}body:before{content:"";grid-column:full;grid-row:content}ol,ul{padding-left:1em}:not(.icon-list,.tag-list)>li+li{margin-top:.4em}li::marker,.network{color:var(--color-secondary)}a{color:var(--color-accent);text-decoration:none}a:focus,a:hover{text-decoration:underline}h1,h2,h3,h5{font-weight:400}h1,h2,h3{line-height:1.2}h1{font-size:var(--scale5)}h2{color:var(--color-secondary);font-size:var(--scale4)}h3{color:var(--color-secondary);font-size:var(--scale3);grid-column:side;margin-bottom:1rem}h4{font-size:var(--scale2)}h5{font-size:var(--scale1)}h6{font-size:var(--scale0)}blockquote{border-left:.2em solid var(--color-dimmed);padding-left:1em}cite{color:var(--color-secondary);font-style:inherit}cite:before{content:"— "}svg{margin-right:.2em;vertical-align:text-bottom}.masthead{background:var(--color-dimmed);display:inherit;gap:inherit;grid-column:full;grid-template-columns:inherit;padding:4em 0;text-align:center}.masthead>*,section{grid-column:main}.masthead>img{border:4px solid;border-radius:50%;margin:0 auto;max-width:12em}article>*+*,blockquote>*+*,.timeline>div>*+*{margin-top:.6em}.meta{color:var(--color-secondary)}.stack{display:grid;gap:1.5em}.icon-list{display:flex;flex-wrap:wrap;gap:.4em 1em;justify-content:center;list-style:none;padding:0}.grid-list{display:grid;gap:1em}.tag-list{display:flex;flex-wrap:wrap;gap:.4em;list-style:none;padding:0}.tag-list>li{background:var(--color-dimmed);border-radius:.2em;padding:.2em .6em}.timeline>div{position:relative}.timeline>div:not(:last-child){padding-bottom:1rem}.timeline>div:not(:last-child):before{content:"";position:absolute;top:1rem;left:-15px;width:2px;height:100%;background:var(--color-secondary)}.timeline>div:not(:only-child):after{content:"";position:absolute;top:.6rem;left:-20px;width:8px;height:8px;background:var(--color-secondary);border:2px solid var(--color-background);border-radius:50%}@media print,(min-width: 48em){h3{text-align:right;margin-bottom:inherit}.masthead{text-align:inherit}.masthead>*,section{grid-column:content}.masthead img{grid-column:side;grid-row:span 2;max-width:100%}section{display:contents}.icon-list{flex-direction:column}.grid-list{grid-template-columns:repeat(auto-fit,minmax(calc((100% - 1em)/2),1fr))}}@media print{.duration{display:none}}
+        </style>
+        <script type="module">
+          const pluralize = (num, str) => `${num} ${num === 1 ? str : str.concat('s')}`
+
+class TimeDuration extends HTMLElement {
+  connectedCallback() {
+    const [from, to] = this.querySelectorAll('time')
+    if (!from) return
+
+    const startDate = new Date(from.dateTime || from.textContent)
+    const endDate = new Date(to ? to.dateTime || to.textContent : Date.now())
+    const diffDate = new Date(endDate - startDate)
+
+    const years = diffDate.getFullYear() - 1970
+    const months = diffDate.getMonth()
+    const days = diffDate.getDate() - 1
+
+    const segments = [
+      years && pluralize(years, 'yr'),
+      months && pluralize(months, 'mo'),
+      days && !years && !months && pluralize(days, 'day'),
+    ].filter(Boolean)
+    if (!segments.length) return
+
+    const duration = document.createElement('time')
+    duration.classList.add('duration')
+    duration.textContent = '· '.concat(segments.join(' '))
+
+    this.append(' ', duration)
+  }
+}
+
+customElements.define('time-duration', TimeDuration)
+
+        </script>
+      </head>
+      <body>
+        
+    <header class="masthead">
+      <img src="assets/blake-dolin.jpeg" alt="" />
+      <div><h1>Blake Dolin</h1> <h2>Threat model includes printers.</h2></div>
+      <article><p>Lifelong IT nerd and tinkerer with a strong background in troubleshooting complex issues under pressure. Experienced across the stack, from hardware and software to servers and network, handling end-to-end problem solving. So lazy I write code to do all my work for me. Obsessed with security; they're never getting my blue party hat. I maintain an extensive home lab environment that I only occasionally consider setting on fire.</p></article>
+      <ul class="icon-list">
+        
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Tulsa, United States
+          </li>
+        
+        
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <a href="mailto:blake@dolinit.com">blake@dolinit.com</a>
+          </li>
+        
+        
+        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg> <a href="https://dolinit.com">dolinit.com</a></li>
+        
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg> <a href="https://linkedin.com/in/blakedolin">blakedolin</a>
+              <span class="network">(LinkedIn)</span>
+            </li>
+          
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg> <a href="https://github.com/siennaphoenix">siennaphoenix</a>
+              <span class="network">(GitHub)</span>
+            </li>
+          
+      </ul>
+    </header>
+   
+      <section id="work">
+        <h3>Work</h3>
+        <div class="stack">
+          
+              <article>
+                <header>
+                  <h4><a href="https://oneok.com">ONEOK</a></h4>
+                  <div class="meta"></div>
+                </header>
+                <div class="timeline">
+                  
+                      <div>
+                        <div>
+                          <h5>Systems Analyst II - Application Infrastructure Services</h5>
+                          <div class="meta">
+                            <div><time-duration><time datetime="2023-10-10">Oct 2023</time> – Present</time-duration></div>
+                            <div>Tulsa, Oklahoma, United States</div>
+                          </div>
+                        </div>
+                        <p>As a Windows Administrator, I support a diverse range of Application Development teams in meeting business goals. My responsibilities include managing core services such as DNS, Certificate Management, and Active Directory/Authentication. I work closely with InfoSec to deploy and manage cybersecurity infrastructure and tools. Additionally, I assist Application teams in developing CI/CD pipelines using various automation platforms, including Ansible, Salt, Gitlab, and more. I also develop and provide accurate reporting using enterprise monitoring tools like Splunk and Tenable.</p>
+                        
+                      </div>
+                    
+                </div>
+              </article>
+            
+              <article>
+                <header>
+                  <h4><a href="https://hummingbird.tech">Hummingbird.Tech</a></h4>
+                  <div class="meta"></div>
+                </header>
+                <div class="timeline">
+                  
+                      <div>
+                        <div>
+                          <h5>Senior Engineer, Central Services</h5>
+                          <div class="meta">
+                            <div><time-duration><time datetime="2022-10-10">Oct 2022</time> – <time datetime="2023-10-06">Oct 2023</time></time-duration></div>
+                            <div>Tulsa, Oklahoma, United States</div>
+                          </div>
+                        </div>
+                        <p>Expertly manages and maintains all internal software tools used to efficiently run business operations and support clients. Acts as lead technical escalation point for helpdesk, providing quick and effective resolutions to technical issues. Demonstrates strong leadership and management skills by actively participating in key business decisions and effectively communicating technical issues to non-technical stakeholders. Utilizes expert knowledge in the field to identify areas for improvement and implement changes to increase overall efficiency and productivity, including developing automation workflows to streamline processes and reduce errors.</p>
+                        
+                      </div>
+                    
+                </div>
+              </article>
+            
+              <article>
+                <header>
+                  <h4><a href="https://sagenet.com">SageNet</a></h4>
+                  <div class="meta"></div>
+                </header>
+                <div class="timeline">
+                  
+                      <div>
+                        <div>
+                          <h5>Manager, Installation Support Team</h5>
+                          <div class="meta">
+                            <div><time-duration><time datetime="2021-01-31">Jan 2021</time> – <time datetime="2022-10-31">Oct 2022</time></time-duration></div>
+                            <div>Tulsa, Oklahoma, United States</div>
+                          </div>
+                        </div>
+                        <p>Senior engineer overseeing a team responsible for installation and verification of all equipment rollouts company-wide. Working closely with network engineering and automation teams, helped to drive custom automation integrations to create a 'single pane of glass' for installation support technicians. Primary administrator for ZenDesk ticketing system. Implemented custom python scripting for management of TeamViewer, SolarWinds, Meraki, and other platforms via API. Creation and maintenance of rollout documentation. Worked with internal resources in the development and delivery of in-depth training programs for onboarding employees.</p>
+                        
+                      </div>
+                    
+                      <div>
+                        <div>
+                          <h5>Supervisor, Configuration Team</h5>
+                          <div class="meta">
+                            <div><time-duration><time datetime="2019-05-31">May 2019</time> – <time datetime="2021-01-31">Jan 2021</time></time-duration></div>
+                            <div>Tulsa, Oklahoma Area</div>
+                          </div>
+                        </div>
+                        <p>Managed network equipment configuration across various vendors, including Cisco, Meraki, Fortinet, HPE/Aruba, Alcatel-Lucent, and many others. HP and Lenovo certified warranty repair technician providing repair service for both in-house and client-owned end-user devices and server equipment. Implementation of custom PC imaging and configuration solution which increases the throughput of configurations by 2000%. Creation and ongoing maintenance of documentation around all processes.</p>
+                        
+                      </div>
+                    
+                      <div>
+                        <div>
+                          <h5>Digital Signage/Systems Engineer</h5>
+                          <div class="meta">
+                            <div><time-duration><time datetime="2014-11-30">Nov 2014</time> – <time datetime="2019-05-31">May 2019</time></time-duration></div>
+                            <div>Tulsa, Oklahoma Area</div>
+                          </div>
+                        </div>
+                        <p>Configuration, Monitoring, and Management of an industry-leading Digital Signage deployment across over three thousand active sites. Providing around-the-clock support for Digital Signage as lead engineer for escalation. Administration of business-critical applications such as AD, Internal Ticketing and Inventory systems, and core network services.</p>
+                        
+                      </div>
+                    
+                </div>
+              </article>
+            
+              <article>
+                <header>
+                  <h4><a href="https://twotrees.com">Twotrees Technologies, LLC</a></h4>
+                  <div class="meta"></div>
+                </header>
+                <div class="timeline">
+                  
+                      <div>
+                        <div>
+                          <h5>Field Service Engineer</h5>
+                          <div class="meta">
+                            <div><time-duration><time datetime="2015-08-31">Aug 2015</time> – <time datetime="2017-10-31">Oct 2017</time></time-duration></div>
+                            <div>Tulsa, Oklahoma Area</div>
+                          </div>
+                        </div>
+                        <p>Independent field engineer providing a wide range of IT services to K-12 school districts in North-East Oklahoma for a Wichita, KS-based IT services company. Installation, configuration, and management of network, server, and end-user equipment. Troubleshooting and resolution of trouble tickets utilizing remote-support techniques where possible to improve ticket resolution times. Consistently improved customer relations and satisfaction ratings through increased efficiency in problem resolution and effectively communicating technical issues and future growth needs with administration.</p>
+                        
+                      </div>
+                    
+                </div>
+              </article>
+            
+              <article>
+                <header>
+                  <h4><a href="https://ou.edu/ouit">University of Oklahoma - Information Technology</a></h4>
+                  <div class="meta"></div>
+                </header>
+                <div class="timeline">
+                  
+                      <div>
+                        <div>
+                          <h5>Services Specialist</h5>
+                          <div class="meta">
+                            <div><time-duration><time datetime="2013-09-30">Sep 2013</time> – <time datetime="2014-02-28">Feb 2014</time></time-duration></div>
+                            <div>Norman, Oklahoma</div>
+                          </div>
+                        </div>
+                        <p>Call-center and in-person-based tech support the entire OU community, computer repair and software maintenance, use of IT management and data recovery software, troubleshooting, and diagnosis of Apple devices using specialized tools and equipment. Extensive Apple troubleshooting experience.</p>
+                        
+                      </div>
+                    
+                </div>
+              </article>
+            
+        </div>
+      </section>
+      
+      <section id="education">
+        <h3>Education</h3>
+        <div class="stack">
+          
+              <article>
+                <header>
+                  <h4>Tulsa Technology Center-Lemley Campus</h4>
+                  <div class="meta">
+                    <strong>Pre-Engineering</strong>
+                    <div><time-duration><time datetime="2011-08-01">Aug 2011</time> – <time datetime="2013-05-31">May 2013</time></time-duration></div>
+                  </div>
+                </header>
+                <p>Project Lead The Way</p>
+                
+                  <h5>Courses</h5>
+                  <ul>
+                    <li><p>Digital Electronics</p></li><li><p>Civil Engineering and Architecture</p></li><li><p>Computer Integrated Manufacturing</p></li><li><p>Engineering Design and Development</p></li>
+                  </ul>
+                
+              </article>
+            
+              <article>
+                <header>
+                  <h4>University of Oklahoma</h4>
+                  <div class="meta">
+                    <strong>Electrical and Electronics Engineering</strong>
+                    <div><time-duration><time datetime="2013-08-01">Aug 2013</time> – <time datetime="2014-02-28">Feb 2014</time></time-duration></div>
+                  </div>
+                </header>
+                
+                
+              </article>
+            
+              <article>
+                <header>
+                  <h4>Booker T. Washington High School</h4>
+                  <div class="meta">
+                    
+                    <div><time-duration><time datetime="2009-08-01">Aug 2009</time> – <time datetime="2013-05-31">May 2013</time></time-duration></div>
+                  </div>
+                </header>
+                <p>High School Diploma</p>
+                
+              </article>
+            
+        </div>
+      </section>
+    
+          
+      <section id="certificates">
+        <h3>Certificates</h3>
+        <div class="stack">
+          
+              <article>
+                <header>
+                  <h4><a href="https://cp.certmetrics.com/cisco/en/public/verify/credential/426006486498FQWJ">Cisco Certified Network Associate Routing and Switching (CCNA)</a></h4>
+                  <div class="meta">
+                    <div>Issued by <strong>Cisco</strong></div> 
+                  </div>
+                </header>
+              </article>
+            
+              <article>
+                <header>
+                  <h4><a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-GCG7DC8YK0.pdf">Beginner Learning Path</a></h4>
+                  <div class="meta">
+                    <div>Issued by <strong>TryHackMe</strong></div> 
+                  </div>
+                </header>
+              </article>
+            
+              <article>
+                <header>
+                  <h4><a href="https://www.credly.com/badges/8425cbdf-e9a9-41ed-89fe-39d930b0e3d9/">CompTIA Server+ Certification</a></h4>
+                  <div class="meta">
+                    <div>Issued by <strong>CompTIA</strong></div> 
+                  </div>
+                </header>
+              </article>
+            
+              <article>
+                <header>
+                  <h4><a href="https://www.credly.com/badges/878da847-586c-4df4-948e-d29c9181aafd/">CompTIA A+ ce Certification</a></h4>
+                  <div class="meta">
+                    <div>Issued by <strong>CompTIA</strong></div> 
+                  </div>
+                </header>
+              </article>
+            
+        </div>
+      </section>
+    
+         
+      <section id="skills">
+        <h3>Skills</h3>
+        <div class="grid-list">
+          
+              <div>
+                <h4>Cybersecurity</h4>
+                
+                  <ul class="tag-list">
+                    <li>Vulnerability Management</li><li>Privileged Access Management</li>
+                  </ul>
+                
+              </div>
+            
+              <div>
+                <h4>DevOps</h4>
+                
+                  <ul class="tag-list">
+                    <li>CI/CD</li><li>Automation</li><li>Infrastructure as Code</li><li>Containerization</li>
+                  </ul>
+                
+              </div>
+            
+              <div>
+                <h4>Networking</h4>
+                
+                  <ul class="tag-list">
+                    <li>TCP/IP</li><li>Routing and Switching</li><li>Firewalls</li><li>VPNs</li><li>Load Balancing</li>
+                  </ul>
+                
+              </div>
+            
+              <div>
+                <h4>System Administration</h4>
+                
+                  <ul class="tag-list">
+                    <li>Windows Server</li><li>Active Directory</li><li>DNS</li><li>DHCP</li>
+                  </ul>
+                
+              </div>
+            
+              <div>
+                <h4>Scripting</h4>
+                
+                  <ul class="tag-list">
+                    <li>Python</li><li>Bash</li><li>PowerShell</li><li>Ansible</li>
+                  </ul>
+                
+              </div>
+            
+        </div>
+      </section>
+     
+      <section id="languages">
+        <h3>Languages</h3>
+        <div class="grid-list">
+          <div><h4>English</h4> Native Speaker</div>
+        </div>
+      </section>
+    
+        
+      <section id="interests">
+        <h3>Interests</h3>
+        <div class="grid-list">
+          
+              <div>
+                <h4>Home Lab</h4>
+                
+                  <ul class="tag-list">
+                    <li>Containerization</li><li>Automation</li><li>Networking</li><li>Security</li>
+                  </ul>
+                
+              </div>
+            
+              <div>
+                <h4>Tabletop Gaming</h4>
+                
+                  <ul class="tag-list">
+                    <li>Dungeons & Dragons</li><li>Daggerheart</li><li>Stars Without Number</li>
+                  </ul>
+                
+              </div>
+            
+        </div>
+      </section>
+     
+      </body>
+    </html>
