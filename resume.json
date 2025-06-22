@@ -31,8 +31,12 @@
       "name": "ONEOK",
       "position": "Systems Analyst II - Application Infrastructure Services",
       "startDate": "2023-10-10",
-      "highlights": [],
-      "summary": "As a Windows Administrator, I support a diverse range of Application Development teams in meeting business goals. My responsibilities include managing core services such as DNS, Certificate Management, and Active Directory/Authentication. I work closely with InfoSec to deploy and manage cybersecurity infrastructure and tools. Additionally, I assist Application teams in developing CI/CD pipelines using various automation platforms, including Ansible, Salt, Gitlab, and more. I also develop and provide accurate reporting using enterprise monitoring tools like Splunk and Tenable.",
+      "highlights": [
+        "Supported automation and CI/CD for application teams with Ansible, Salt, GitLab, and more.",
+        "Managed DNS, Active Directory, certificate management, and other core infrastructure services.",
+        "Deployed and maintained cybersecurity tools in partnership with InfoSec."
+      ],
+      "summary": "Windows admin supporting app development teams with DNS, certificates, and Active Directory. Manage core services and work with InfoSec to keep things secure. Help teams automate tasks using tools like Ansible and GitLab. Monitor and report on infrastructure using Splunk and Tenable.",
       "url": "https://oneok.com",
       "location": "Tulsa, Oklahoma, United States"
     },
@@ -41,8 +45,12 @@
       "position": "Senior Engineer, Central Services",
       "startDate": "2022-10-10",
       "endDate": "2023-10-06",
-      "highlights": [],
-      "summary": "Expertly manages and maintains all internal software tools used to efficiently run business operations and support clients. Acts as lead technical escalation point for helpdesk, providing quick and effective resolutions to technical issues. Demonstrates strong leadership and management skills by actively participating in key business decisions and effectively communicating technical issues to non-technical stakeholders. Utilizes expert knowledge in the field to identify areas for improvement and implement changes to increase overall efficiency and productivity, including developing automation workflows to streamline processes and reduce errors.",
+      "highlights": [
+        "Lead escalation for complex helpdesk issues.",
+        "Automated repetitive tasks and built efficient workflows.",
+        "Maintained and improved all internal business tools."
+      ],
+      "summary": "Maintained internal software that keeps business operations going. Handled tough tickets and real troubleshooting. Improved and automated processes for smoother workflows. Worked with different teams to make sure technology fits the work.",
       "url": "https://hummingbird.tech",
       "location": "Tulsa, Oklahoma, United States"
     },
@@ -51,8 +59,11 @@
       "position": "Manager, Installation Support Team",
       "startDate": "2021-01-31",
       "endDate": "2022-10-31",
-      "highlights": [],
-      "summary": "Senior engineer overseeing a team responsible for installation and verification of all equipment rollouts company-wide. Working closely with network engineering and automation teams, helped to drive custom automation integrations to create a 'single pane of glass' for installation support technicians. Primary administrator for ZenDesk ticketing system. Implemented custom python scripting for management of TeamViewer, SolarWinds, Meraki, and other platforms via API. Creation and maintenance of rollout documentation. Worked with internal resources in the development and delivery of in-depth training programs for onboarding employees.",
+      "highlights": [
+        "Built and maintained automation for installation support.",
+        "Managed team responsible for hardware and network rollouts."
+      ],
+      "summary": "Led the team responsible for equipment rollouts and setup across the company. Worked with engineering to automate support and installations. Managed and updated documentation and training for the team. Solved problems that required hands-on troubleshooting.",
       "url": "https://sagenet.com",
       "location": "Tulsa, Oklahoma, United States"
     },
@@ -61,8 +72,12 @@
       "position": "Supervisor, Configuration Team",
       "startDate": "2019-05-31",
       "endDate": "2021-01-31",
-      "highlights": [],
-      "summary": "Managed network equipment configuration across various vendors, including Cisco, Meraki, Fortinet, HPE/Aruba, Alcatel-Lucent, and many others. HP and Lenovo certified warranty repair technician providing repair service for both in-house and client-owned end-user devices and server equipment. Implementation of custom PC imaging and configuration solution which increases the throughput of configurations by 2000%. Creation and ongoing maintenance of documentation around all processes.",
+      "highlights": [
+        "Designed and maintained imaging and configuration systems.",
+        "Provided warranty repair for HP and Lenovo devices.",
+        "Managed network equipment configuration across multiple vendors."
+      ],
+      "summary": "Oversaw configuration of network devices from a range of vendors. Certified to repair HP and Lenovo hardware. Designed and maintained a system to speed up PC imaging and setup. Organized and updated process documentation.",
       "url": "https://sagenet.com",
       "location": "Tulsa, Oklahoma Area"
     },
@@ -71,8 +86,11 @@
       "position": "Digital Signage/Systems Engineer",
       "startDate": "2014-11-30",
       "endDate": "2019-05-31",
-      "highlights": [],
-      "summary": "Configuration, Monitoring, and Management of an industry-leading Digital Signage deployment across over three thousand active sites. Providing around-the-clock support for Digital Signage as lead engineer for escalation. Administration of business-critical applications such as AD, Internal Ticketing and Inventory systems, and core network services.",
+      "highlights": [
+        "Managed digital signage deployments at more than 3,000 locations.",
+        "Updated and organized documentation for the team."
+      ],
+      "summary": "Set up and managed digital signage networks at thousands of sites. Main contact for advanced support issues. Maintained and supported core business apps like Active Directory and ticketing systems. Responded to on-call issues as needed.",
       "url": "https://sagenet.com",
       "location": "Tulsa, Oklahoma Area"
     },
@@ -81,8 +99,8 @@
       "position": "Field Service Engineer",
       "startDate": "2015-08-31",
       "endDate": "2017-10-31",
-      "highlights": [],
-      "summary": "Independent field engineer providing a wide range of IT services to K-12 school districts in North-East Oklahoma for a Wichita, KS-based IT services company. Installation, configuration, and management of network, server, and end-user equipment. Troubleshooting and resolution of trouble tickets utilizing remote-support techniques where possible to improve ticket resolution times. Consistently improved customer relations and satisfaction ratings through increased efficiency in problem resolution and effectively communicating technical issues and future growth needs with administration.",
+      "highlights": ["Improved customer satisfaction with responsive support."],
+      "summary": "Delivered IT support to K-12 schools. Handled network, server, and user device troubleshooting both onsite and remotely. Focused on quick problem solving and clear communication with school staff and admins.",
       "url": "https://twotrees.com",
       "location": "Tulsa, Oklahoma Area"
     },
@@ -91,8 +109,12 @@
       "position": "Services Specialist",
       "startDate": "2013-09-30",
       "endDate": "2014-02-28",
-      "highlights": [],
-      "summary": "Call-center and in-person-based tech support the entire OU community, computer repair and software maintenance, use of IT management and data recovery software, troubleshooting, and diagnosis of Apple devices using specialized tools and equipment. Extensive Apple troubleshooting experience.",
+      "highlights": [
+        "Supported the OU community by phone and in person.",
+        "Specialized in Apple hardware and software.",
+        "Handled computer repairs and software troubleshooting."
+      ],
+      "summary": "Provided tech support for students, faculty, and staff. Worked on hardware repairs and software troubleshooting. Specialized in fixing Apple devices. Used available tools for data recovery and IT management.",
       "url": "https://ou.edu/ouit",
       "location": "Norman, Oklahoma"
     }
