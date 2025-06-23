@@ -4,6 +4,15 @@ personal blog and homepage.
 
 created by [blake@dolinit.com](mailto:blake@dolinit.com)
 
+## Services
+
+- [Admin Console](https://cockpit.dolinit.com)
+- [Portainer](https://portainer.dolinit.com/)
+- [Jellyfin](https://jellyfin.dolinit.com)
+- [Jellyseerr](https://jellyseerr.dolinit.com)
+- [RPC](https://rpc.dolinit.com/)
+- [Foundry VTT](https://foundry.dolinit.com)
+
 ## Contact Me
 
 - [Resume](/resume.html)
