@@ -6,12 +6,25 @@ created by [blake@dolinit.com](mailto:blake@dolinit.com)
 
 ## Services
 
-- [Admin Console](https://cockpit.dolinit.com)
-- [Portainer](https://portainer.dolinit.com/)
-- [Jellyfin](https://jellyfin.dolinit.com)
-- [Jellyseerr](https://jellyseerr.dolinit.com)
-- [RPC](https://rpc.dolinit.com/)
+[Status Page](https://status.dolinit.com)
+
+### Media
+
+- [Media Server](https://jellyfin.dolinit.com)
+- [Media Requests](https://jellyseerr.dolinit.com)
+- [Transmission](https://rpc.dolinit.com)
+
+### Gaming
+
 - [Foundry VTT](https://foundry.dolinit.com)
+- [Minecraft Server](minecraft.dolinit.com:25565)
+  - Runs the [Prominence II RPG Hasturian Era](https://www.curseforge.com/minecraft/modpacks/prominence-2-rpg) Modpack from CurseForge
+
+### Admin
+
+- [Admin Console](https://webmin.dolinit.com)
+- [Portainer](https://portainer.dolinit.com)
+- [Traefik](https://traefik.dolinit.com)
 
 ## Contact Me
 
